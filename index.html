@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lora"
+      href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
     <link type="text/css" href="layout.css" rel="stylesheet" />
@@ -40,18 +40,26 @@
           </tr>
 
           <tr>
-            <th>Коэффициент размножения травоядных:</th>
+            <th>Коэффициент убийства жертв: </th>
+            <td contenteditable id="preyDeathCoef">0.01</td>
+          </tr>
+
+          <tr>
+            <th>Коэффициент размножения жертв: </th>
             <td contenteditable id="preyBirthCoef">0.04</td>
           </tr>
         </tbody>
       </table>
       <h2>
-        <button title="Start simulation" onclick="start();">Начать</button>
+        <button title="Начать" onclick="start();">Начать</button>
       </h2>
     </section>
     <!-- core app. -->
     <div>
       <canvas id="can" height="400" width="400"> </canvas>
+    </div>
+    <div>
+      <canvas id="canGr" height="200" width="400"> </canvas>
     </div>
     <script type="text/javascript" src="model.js"></script>
   </body>
