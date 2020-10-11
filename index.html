@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="layout.css" rel="stylesheet" />
+    <title>Predator-Prey model</title>
+  </head>
+  <body>
+    <section>
+      <h2>Параметры</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Время каждого шага (мс):</th>
+            <td contenteditable id="speed">10</td>
+          </tr>
+
+          <tr>
+            <th>Кол-во хищников (%):</th>
+            <td contenteditable id="predatorsPercentage">0.02</td>
+          </tr>
+
+          <tr>
+            <th>Кол-во жертв (%):</th>
+            <td contenteditable id="preyPercentage">0.2</td>
+          </tr>
+
+          <tr>
+            <th>Коэффициент убыли хищников:</th>
+            <td contenteditable id="predatorDeathCoef">0.02</td>
+          </tr>
+
+          <tr>
+            <th>Коэффициент размножения хищников:</th>
+            <td contenteditable id="predatorBirthCoef">0.9</td>
+          </tr>
+
+          <tr>
+            <th>Коэффициент размножения травоядных:</th>
+            <td contenteditable id="preyBirthCoef">0.04</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        <button title="Start simulation" onclick="start();">Начать</button>
+      </h2>
+    </section>
+    <!-- core app. -->
+    <div>
+      <canvas id="can" height="400" width="400"> </canvas>
+    </div>
+    <script type="text/javascript" src="model.js"></script>
+  </body>
+</html>
